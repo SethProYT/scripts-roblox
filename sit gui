@@ -1,0 +1,25 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("sit gui", "DarkTheme")
+
+local Tab = Window:NewTab("sit down")
+
+local Section = Tab:NewSection("Scripts")
+
+
+Section:NewToggle("Loop Sit Down", "", function(state)
+    if state then
+        getgenv().sit = true
+
+        while wait() do
+            if getgenv().sit == true then
+                game.Players.LocalPlayer.Character.Humanoid.Sit = true
+            end
+        end
+    else
+        getgenv().sit = false
+    end
+end)
+
+Section:NewButton("just sit", "", function()
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end)
