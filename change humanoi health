@@ -1,0 +1,13 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Set Health", "Sentinel")
+
+local Tab3 = Window:NewTab("Main")
+
+local Section3 = Tab3:NewSection("Scripts")
+
+
+Section3:NewSlider("Set Health", "Player requests disconnection", 999, 0, function(s) -- 500 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.Health = s
+end)
+
