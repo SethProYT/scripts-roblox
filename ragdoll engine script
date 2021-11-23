@@ -12,3 +12,7 @@ end)
 Section:NewButton("Anti-Push", ":troll:", function()
     game.Players.LocalPlayer.Character.Pushed:Destroy()
 end)
+
+Section:NewButton("Anti-Ragdoll", ":troll:", function()
+    game.Players.LocalPlayer.Character.RagdollMe:Destroy()
+end)
