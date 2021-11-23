@@ -1,0 +1,21 @@
+--- SHIFT TO RUN SCRIPT BY SETHPRO
+
+--- Input Service
+
+local speedster = game:GetService("UserInputService") --- Finds UserInputService
+
+--- Main
+
+speedster.InputBegan:Connect(function(Player)  
+	if Player.KeyCode == Enum.KeyCode.LeftShift then --- If LeftShift key pressed then do the following
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 28	--- changes your walkspeed
+		print("Running")
+	end
+end)
+
+speedster.InputEnded:Connect(function(Player)
+	if Player.KeyCode == Enum.KeyCode.LeftShift then --- If LeftShift key released then do the following:
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 --- Changes walkspeed back to normal
+		print("Walking")
+	end
+end)
