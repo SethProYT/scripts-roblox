@@ -4,10 +4,6 @@ local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Scripts")
 
 
-Section:NewSlider("Change HipHeight", "SliderInfo", 500, 2, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
-end)
-
 
 Section:NewButton("Anti-Push", ":troll:", function()
     game.Players.LocalPlayer.Character.Pushed:Destroy()
