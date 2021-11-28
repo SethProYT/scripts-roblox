@@ -21,6 +21,34 @@ b:Toggle("Very Fast No-Slow",function(bool)
     hackerboinoslow = (bool)
 end)
 
+b:Button("Fix Fast No-slow",function()
+    spawn(function()
+        while wait() do
+            if legitnoslow == true then
+             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            end
+        end
+    end)
+    
+    spawn(function()
+        while wait() do
+            if hackerboinoslow == true then
+             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 90
+            end
+        end
+    end)
+    
+    spawn(function()
+        while wait() do
+            if hackerboinoslow == false then
+             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            end
+        end
+    end)
+end)
+
+
+
 
 b:DestroyGui()
 
@@ -44,7 +72,7 @@ yourvariable:Refresh("Hello") It will only change the text ofc
 ]]
 
 
-
+--- WOW IT IS WORKING BUT ON RESET NIT WORK
 
 
 spawn(function()
@@ -70,6 +98,7 @@ spawn(function()
         end
     end
 end)
+
 
 
 
