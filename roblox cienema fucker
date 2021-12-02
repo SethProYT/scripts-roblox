@@ -1,0 +1,27 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Roblox Cinema Fucker", "DarkTheme")
+
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("Scripts")
+
+
+Section:NewToggle("Fire ClickDetecors", "ToggleInfo", function(state)
+    if state then
+        getgenv().shitter = true
+        
+        while wait(0.9) do
+            if getgenv().shitter == true then
+        for i,v in pairs(workspace:GetDescendants()) do
+          if v:IsA("ClickDetector") then
+           fireclickdetector(v)
+           end
+        end
+    end
+end  
+     
+    else
+        getgenv().shitter = false
+    end
+end)
