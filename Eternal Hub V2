@@ -87,7 +87,7 @@ Section1:NewButton("Remove Fade Frame", "", function()
 end)
 
 Section2:NewSlider("Set WalkSpeed", "", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 
@@ -95,4 +95,70 @@ Section2:NewSlider("Set JumpPower", "", 500, 50, function(s) -- 500 (MaxValue) |
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+end
+
+
+if game.placeId == 6660268265 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+    local Window = Library.CreateLib("Eternal Hub V2", "Sentinel")
+    local Tab2 = Window:NewTab("Auto Farm")
+    local Tab3 = Window:NewTab("Player")
+    local Section2 = Tab2:NewSection("Auto Farm")
+    local Section3 = Tab3:NewSection("Player")
+  
+
+Section2:NewToggle("Auto-Farm", "ToggleInfo", function(state)
+    if state then
+    farmer = state
+    farm()
+    else
+     farmer = state 
+    end
+end)
+
+Section3:NewSlider("Set WalkSpeed", "", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section3:NewSlider("Set JumpPower", "", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+function farm()
+    spawn(function()
+     while farmer == true do
+        local args = {
+            [1] = "Cash",
+            [2] = 5000
+        }
+        
+        game:GetService("ReplicatedStorage").Events.CrateClaim:FireServer(unpack(args))
+        wait()
+    end
+  end)
+end
+
+
+
+
+end
+
+if game.placeId == 815405518 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+    local Window = Library.CreateLib("Eternal Hub V2", "Sentinel")
+    local Tab1 = Window:NewTab("Teleports")
+    local Tab2 = Window:NewTab("Player")
+    local Tab3 = Window:NewTab("Main")
+    local Section1 = Tab1:NewSection("Teleports")
+    local Section2 = Tab2:NewSection("Player")
+    local Section3 = Tab3:NewSection("Main")
+
+    Section1:NewButton("TP In-Game Map", "", function()
+        print("Clicked")
+    end)
+    Section1:NewButton("TP To Lobby", "", function()
+        print("Clicked")
+    end)
 end
