@@ -172,7 +172,7 @@ if game.placeId == 815405518 then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
 
-
+--- ok
 
 end
 
