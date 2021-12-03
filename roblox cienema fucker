@@ -7,7 +7,7 @@ local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Scripts")
 
 
-Section:NewToggle("Fire ClickDetecors", "ToggleInfo", function(state)
+Section:NewToggle("Fire ClickDetectors", "ToggleInfo", function(state)
     if state then
         getgenv().shitter = true
         

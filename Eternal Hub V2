@@ -1,0 +1,98 @@
+if game.placeId == 155615604 then
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Eternal Hub v2", "Sentinel")
+
+local Tab1 = Window:NewTab("Main")
+local Tab2 = Window:NewTab("Player")
+local Tab3 = Window:NewTab("Guns")
+local Section1 = Tab1:NewSection("Main")
+local Section2 = Tab2:NewSection("Player")
+local Section3 = Tab3:NewSection("Guns")
+
+Section3:NewButton("Give Remington-870", "", function()
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+end)
+
+Section3:NewButton("Give M9", "", function()
+local args = {
+    [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+end)
+
+Section3:NewButton("Give AK-47", "", function()
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+end)
+
+Section3:NewButton("Gun Mod For AK-47", "", function()
+    local plr = game.Players.localPlayer
+ 
+	local gun = plr.Backpack:FindFirstChild("AK-47").GunStates
+ 
+	a = require(gun)
+	a.MaxAmmo = math.huge
+    a.ReloadTime = 0
+    a.Bullets = 3
+    a.CurrentAmmo = math.huge
+    a.Damage = 100
+end)
+
+Section3:NewButton("Gun Mod For M9", "", function()
+ local plr = game.Players.LocalPlayer
+ local gun = plr.Backpack.M9.GunStates
+
+ a = require(gun)
+ a.MaxAmmo = math.huge
+ a.ReloadTime = 0
+ a.Bullets = 1
+ a.CurrentAmmo = math.huge
+ a.AutoFire = true
+ a.Damage = 100
+end)
+
+Section3:NewButton("Gun Mod For Remington-870", "", function()
+ local plr = game.Players.LocalPlayer
+ local gun = plr.Backpack:FindFirstChild("Remington 870").GunStates
+
+ a = require(gun)
+ a.CurrentAmmo = math.huge
+ a.MaxAmmo = math.huge
+ a.AutoFire = true
+ a.Bullets = 2
+ a.Damage = 100
+end)
+
+Section1:NewButton("TP To Cop Spawn", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(832.28668212891, 99.98998260498, 2308.6547851563)
+end)
+
+Section1:NewButton("TP To Criminal Base", "",  function()
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-975.89605712891, 109.32376861572, 2053.705078125)
+end)
+
+Section1:NewButton("Remove Fade Frame", "", function()
+   game.Players.LocalPlayer.PlayerGui.Home.fadeFrame:Destroy()
+end)
+
+Section2:NewSlider("Set WalkSpeed", "", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+Section2:NewSlider("Set JumpPower", "", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+end
