@@ -110,12 +110,21 @@ if game.placeId == 6660268265 then
     local Section3 = Tab3:NewSection("Player")
   
 
-Section2:NewToggle("Auto-Farm", "ToggleInfo", function(state)
+Section2:NewToggle("Auto-Farm", "", function(state)
     if state then
     farmer = state
     farm()
     else
      farmer = state 
+    end
+end)
+
+Section2:NewToggle("Auto-Rebirth", "", function(state)
+    if state then
+    rebirth = state
+    rebirthEvent()
+    else
+     rebirth = state
     end
 end)
 
@@ -140,6 +149,16 @@ function farm()
     end
   end)
 end
+
+function rebirthEvent()
+    spawn(function()
+        while rebirth == true do 
+            game:GetService("ReplicatedStorage").rebirthEvent:FireServer()
+        end
+    end)
+end
+
+
 
 
 
