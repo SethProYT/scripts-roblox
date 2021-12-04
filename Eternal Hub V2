@@ -81,6 +81,10 @@ Section1:NewButton("TP To Criminal Base", "",  function()
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-975.89605712891, 109.32376861572, 2053.705078125)
 end)
 
+Section1:NewButton("TP To Prison", "", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(911.99829101563, 99.98998260498, 2354.0180664063)
+end)
+
 Section1:NewButton("Remove Fade Frame", "", function()
    game.Players.LocalPlayer.PlayerGui.Home.fadeFrame:Destroy()
 end)
