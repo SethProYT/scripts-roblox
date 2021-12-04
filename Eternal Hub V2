@@ -46,7 +46,6 @@ Section3:NewButton("Gun Mod For AK-47", "", function()
     a.ReloadTime = 0
     a.Bullets = 3
     a.CurrentAmmo = math.huge
-    a.Damage = 100
 end)
 
 Section3:NewButton("Gun Mod For M9", "", function()
@@ -70,7 +69,7 @@ Section3:NewButton("Gun Mod For Remington-870", "", function()
  a.MaxAmmo = math.huge
  a.AutoFire = true
  a.Bullets = 2
- a.Damage = 100
+
 end)
 
 Section1:NewButton("TP To Cop Spawn", "", function()
