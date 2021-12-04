@@ -204,6 +204,15 @@ if game.placeId == 3738115442 then
         end
     end)
 
+    Section:NewButton("Open boxing league wally ui version", "", function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SethProYT/scripts-roblox/main/extras"))()
+    end)
+
+
+
+
+
+
 function NoSlow()
     spawn(function()
     while legit == true do
