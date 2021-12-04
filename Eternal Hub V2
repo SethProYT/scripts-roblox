@@ -87,7 +87,7 @@ Section1:NewButton("Remove Fade Frame", "", function()
 end)
 
 Section2:NewSlider("Set WalkSpeed", "", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
 
