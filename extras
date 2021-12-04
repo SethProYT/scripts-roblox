@@ -14,11 +14,19 @@ b:Label("Fixed some bugs :)",{
 b:Toggle("Legit No-Slow",function(bool)
     noslow = bool
     print(shared.toggle)
+    if noslow then
+    legit()
+    end
 end)
 
 b:Toggle("Hacker Bo1 No-Slow",function(bool)
     nonlegit = bool
     print(shared.toggle)
+    
+    if nonlegit then
+     hacker()
+    end
+    
     if not nonlegit then
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
