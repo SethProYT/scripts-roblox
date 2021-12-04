@@ -154,6 +154,7 @@ function rebirthEvent()
     spawn(function()
         while rebirth == true do 
             game:GetService("ReplicatedStorage").rebirthEvent:FireServer()
+            wait()
         end
     end)
 end
