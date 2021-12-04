@@ -59,7 +59,6 @@ Section3:NewButton("Gun Mod For M9", "", function()
  a.Bullets = 1
  a.CurrentAmmo = math.huge
  a.AutoFire = true
- a.Damage = 100
 end)
 
 Section3:NewButton("Gun Mod For Remington-870", "", function()
