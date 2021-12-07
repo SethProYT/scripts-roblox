@@ -524,7 +524,7 @@ function visualizeliaquo()
 end
 
 
-function visualizedimrain
+function visualizedimrain()
     spawn(function()
         while dimrain == true do
             local args = {
