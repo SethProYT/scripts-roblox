@@ -405,6 +405,84 @@ if game.placeId == 155615604 then
         
         end)
         
+       Section3:NewButton("Give Part Spawner", "", function()
+          -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.869366407, 0, 0.483870953, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Remove all instance parts"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.Active = true
+TextButton.Draggable = true
+-- Scripts:
+
+local function WDXOYPD_fake_script() -- TextButton.LocalScript 
+    local script = Instance.new('LocalScript', TextButton)
+
+    script.parent.MouseButton1Click:Connect(function()
+        for i, v in pairs(game.workspace:GetChildren()) do
+            if v.Name == "InstancePart" then
+                   v:Destroy()
+            end
+        end
+    end)
+end
+coroutine.wrap(WDXOYPD_fake_script)()
+
+
+
+
+
+local Tool = Instance.new("Tool")
+local Handle = Instance.new("Part")
+
+
+Tool.Parent = game.Players.LocalPlayer.Backpack
+Tool.Name = "Part Spawner"
+
+Handle.Parent = Tool
+Handle.Name = "Handle"
+
+local function WDXOYPD_fake_script() -- TextButton.LocalScript 
+    local script = Instance.new('LocalScript', Tool)
+
+    script.parent.Activated:Connect(function()
+        local Mouse = game.Players.LocalPlayer:GetMouse()
+
+        local part = Instance.new("Part")
+        part.Name = "InstancePart"
+        part.Anchored = true
+        part.CFrame = Mouse.hit
+        part.Parent = Workspace    
+    end)
+end
+    
+    
+coroutine.wrap(WDXOYPD_fake_script)()
+
+
+       end)
+
+
+
+
         
         end
     
