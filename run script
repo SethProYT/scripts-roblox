@@ -19,3 +19,11 @@ speedster.InputEnded:Connect(function(Player)
 		print("Walking")
 	end
 end)
+
+
+
+
+
+
+
+---- haikal_gantengckl
