@@ -1,0 +1,21 @@
+
+removeshitpost = true
+
+
+
+
+
+
+
+function removejumpscare()
+     spawn(function()
+        while removeshitpost == true do
+     for i, v in pairs(game.Players.LocalPlayer.Backpack:ChildAdded()) do
+    if v.Name == "IY_JumpScare" do
+    Destroy(v)
+       end 
+   end
+   wait()
+       end
+   end)
+end
