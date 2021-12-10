@@ -9,19 +9,20 @@ local Section = Tab:NewSection("Scripts")
 
 Section:NewToggle("Fire ClickDetectors", "ToggleInfo", function(state)
     if state then
-        getgenv().shitter = true
-        
-        while wait(0.9) do
-            if getgenv().shitter == true then
-        for i,v in pairs(workspace:GetDescendants()) do
-          if v:IsA("ClickDetector") then
-           fireclickdetector(v)
-           end
-        end
-    end
-end  
-     
+    crasher = state
+    fireallclickdetectors()
     else
-        getgenv().shitter = false
+    crasher = state
     end
 end)
+
+
+function fireallclickdetectors()
+    spawn(function()
+        while crasher == true do
+            for i, v in pairs(workspace:GetDescendants()) do
+                if v:IsA("ClickDetector") then
+                    firelickdetector(v)
+                end
+            end)
+        end
