@@ -1,0 +1,5 @@
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Humanoid Exists On Character!", "All")
+else
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("bro i think you need surgery", "All")
+end

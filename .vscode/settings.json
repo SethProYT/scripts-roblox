@@ -3,5 +3,9 @@
         "undefined-global",
         "lowercase-global",
         "deprecated"
-    ]
+    ],
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingDelete": "always",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never"
 }
