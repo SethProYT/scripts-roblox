@@ -1,7 +1,4 @@
-_G.Key = ""
-
-
-
+if _G.Key == "S42z3CpvoJxzB2OikM43DTFO2PzK3eOWtpoWuO7vhac=" then
 if game.placeId == 155615604 then
 
 
@@ -504,6 +501,4 @@ end
                 end
             end)
         end
-
-
-
+    end
