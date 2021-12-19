@@ -1,3 +1,7 @@
+_G.Key = ""
+
+
+
 if game.placeId == 155615604 then
 
 
@@ -500,13 +504,6 @@ end
                 end
             end)
         end
-
-
-
-
-
-
-
 
 
 
