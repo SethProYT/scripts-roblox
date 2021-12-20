@@ -607,10 +607,14 @@ end
 end)
 
 Section3:NewButton("Buy Shotgun", "", function()
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle.CFrame
+    if game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle.CFrame
+    end
 end)
 Section3:NewButton("Buy Pistol", "", function()
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle.CFrame
+    if game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle.CFrame
+    end
 end)
 
 Section2:NewSlider("Set WalkSpeed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
