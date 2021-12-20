@@ -608,12 +608,12 @@ end)
 
 Section3:NewButton("Buy Shotgun", "", function()
     if game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle.CFrame
+      game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector").Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     end
 end)
 Section3:NewButton("Buy Pistol", "", function()
     if game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle.CFrame
+     game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     end
 end)
 
