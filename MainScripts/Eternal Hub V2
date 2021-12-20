@@ -633,4 +633,23 @@ Section4:NewButton("Remove HumanoidRootPart (Fun)", "", function()
   game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
 end)
 
+
+
+Section4:NewToggle("Auto Farm", "", function(state)
+    if state then
+        _G.turnedon = state
+ 
+while _G.turnedon do
+    wait()
+    for i,v in pairs(workspace.Particles:GetChildren()) do
+        if v.Name == "Money" then
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Bundle.CFrame
+             wait()
+        end
+    end
+end
+    else
+       _G.turnedon = state
+    end
+end)
 end
