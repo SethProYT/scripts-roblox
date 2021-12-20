@@ -1,5 +1,4 @@
-if _G.Key == "S42z3CpvoJxzB2OikM43DTFO2PzK3eOWtpoWuO7vhac=" then
-if game.placeId == 155615604 then
+    if game.placeId == 155615604 then
 
 
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -501,4 +500,133 @@ end
                 end
             end)
         end
+    
+        if game.placeId == 5610197459 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Eternal Hub V2", "Sentinel")
+    
+        local Tab1 = Window:NewTab("GunChecker")
+        local Tab2 = Window:NewTab("LocalPlayer")
+        local Tab3 = Window:NewTab("AutoBuy")
+    
+    
+        local Section1 = Tab1:NewSection("GunChecker")
+        local Section2 = Tab2:NewSection("LocalPlayer")
+        local Section3 = Tab3:NewSection("AutoBuy")
+        local Section4 = Tab2:NewSection("Other")
+    
+    
+        Section1:NewButton("Check if shotgun is spawned", "", function()
+            if game:GetService("Workspace").Map.ShotgunSpawner:FindFirstChild("ShotgunCollector") then
+                local StarterGui = game:GetService("StarterGui")
+                local Notifications = {
+                "Shotgun found!",
+        
+            }
+    
+            local TimeBetweenNotifications = 1 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+    
+            for i = 1, #Notifications do
+            local Notification = Notifications[i]
+            
+            StarterGui:SetCore("SendNotification", {
+                Title = "Found!",
+                Text = Notification,
+                Duration = 5
+            })
+            
+            wait(TimeBetweenNotifications)
+            end
+    else
+            local StarterGui = game:GetService("StarterGui")
+            local Notifications = {
+            "Shotgun not found!",
+    
+        }
+    
+        local TimeBetweenNotifications = 1 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+    
+        for i = 1, #Notifications do
+        local Notification = Notifications[i]
+        
+        StarterGui:SetCore("SendNotification", {
+            Title = "nothing!",
+            Text = Notification,
+            Duration = 5
+        })
+        
+        wait(TimeBetweenNotifications)
+        end
     end
+    
+    
+    end)
+    
+    Section1:NewButton("Check if Pistol is spawned", "", function()
+        if game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector") then
+            local StarterGui = game:GetService("StarterGui")
+            local Notifications = {
+            "Pistol found!",
+    
+        }
+
+        local TimeBetweenNotifications = 1 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+
+        for i = 1, #Notifications do
+        local Notification = Notifications[i]
+        
+        StarterGui:SetCore("SendNotification", {
+            Title = "Found!",
+            Text = Notification,
+            Duration = 5
+        })
+        
+        wait(TimeBetweenNotifications)
+        end
+else
+        local StarterGui = game:GetService("StarterGui")
+        local Notifications = {
+        "Pistol not found!",
+
+    }
+
+    local TimeBetweenNotifications = 1 --REPLACE 5 WITH THE NUMBER OF SECONDS YOU WANT TO WAIT IN BETWEEN NOTIFICATIONS APPEARING
+
+    for i = 1, #Notifications do
+    local Notification = Notifications[i]
+    
+    StarterGui:SetCore("SendNotification", {
+        Title = "nothing!",
+        Text = Notification,
+        Duration = 5
+    })
+    
+    wait(TimeBetweenNotifications)
+    end
+end
+end)
+
+Section3:NewButton("Buy Shotgun", "", function()
+    game:GetService("Workspace").Map.GunSpawner:FindFirstChild("ShotgunCollector").Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+Section3:NewButton("Buy Pistol", "", function()
+    game:GetService("Workspace").Map.GunSpawner:FindFirstChild("GunCollector").Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section2:NewSlider("Set WalkSpeed", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section2:NewSlider("Set JumpPower", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section4:NewSlider("Set HipHeight", "", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
+end)
+
+Section4:NewButton("Remove HumanoidRootPart (Fun)", "", function()
+  game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
+end)
+
+end
