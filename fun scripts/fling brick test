@@ -1,0 +1,49 @@
+--- Gui to Lua IDK VERSION I TOTALLY USED GUI TO LUA
+
+--- Instances
+local WalkSpeedChanger = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel1 = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextBox")
+local TextLabel3 = Instance.new("TextBox")
+
+-- Properties
+WalkSpeedChanger.Name = 'WalkSpeedChanger'
+WalkSpeedChanger.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+WalkSpeedChanger.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Name = 'Main'
+Frame.Parent = WalkSpeedChanger
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+Frame.Position = UDim2.new(0, 0, 0.424968481, 0)
+Frame.Size = UDim2.new(0, 372, 0, 183)
+
+TextLabel1.Name = 'Title'
+TextLabel1.Parent = Frame
+TextLabel1.Position = UDim2.new(0, 0, 0, 0)
+TextLabel1.Size = UDim2.new(0, 372,0, 28)
+TextLabel1.Text = 'LOCALPLAYER'
+TextLabel1.TextScaled = true
+
+TextLabel2.Name = 'SetWalkSpeed'
+TextLabel2.Parent = Frame
+TextLabel2.Position = UDim2.new(0.231, 0 ,0.257, 0)
+TextLabel2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel2.Text = 'SET WALKSPEED HERE'
+TextLabel2.TextScaled = true
+TextLabel2.Changed:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = TextLabel2.Text
+end)
+
+TextLabel3.Name = 'SetJumpPower'
+TextLabel3.Parent = Frame
+TextLabel3.Position = UDim2.new(0.231, 0, 0.645, 0)
+TextLabel3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel3.Text = 'SET JUMPPOWER HERE'
+TextLabel2.TextScaled = true
+TextLabel3.Changed:Connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = TextLabel3.Text
+end)
+
+
+
