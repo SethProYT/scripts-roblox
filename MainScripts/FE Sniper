@@ -4,6 +4,13 @@ flingclick = false
 HumanDied = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoBot'), true))()
 
+local plr = game.Players.LocalPlayer
+local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://1427534819"
+sound.Name = 'Clubstep VIP'
+
+
+
 local mouse = game.Players.LocalPlayer:GetMouse()
 IT = Instance.new
 CF = CFrame.new
@@ -213,3 +220,17 @@ while wait() do
         end)
     end
 end
+
+local plr = game.Players.LocalPlayer
+local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://1427534819"
+sound.Name = 'Clubstep VIP'
+
+
+
+
+plr.Chatted:Connect(function(message)
+   if message == '-clubstep' then
+       game.workspace["Clubstep VIP"]:Play()
+     end
+end)
