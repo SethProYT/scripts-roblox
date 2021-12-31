@@ -1,0 +1,74 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local UI = Material.Load({
+     Title = "Glitched Text Script",
+     Style = 3,
+     SizeX = 400,
+     SizeY = 400,
+     Theme = "Dark"
+})
+
+local Page = UI.New({
+    Title = "Main"
+})
+
+
+
+Page.Button({
+    Text = "S̶̢̲̲̀̓T̸̠̥̜̩̯͆̓͜Ọ̷͗̉͗͐̍͠P̵̲̽͠",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("S̶̢̲̲̀̓T̸̠̥̜̩̯͆̓͜Ọ̷͗̉͗͐̍͠P̵̲̽͠", "All") 
+    end
+})
+
+Page.Button({
+    Text = "G̵̟̾͝É̴̟͜T̷͇͔͓̜̟͖͙͛̏̀̄ ̷̱̈Ó̷̗͙͕͠͠Ų̷̡̰̘̠̗̼̂̈́̄̇͋̋͘T̶̡͔̪̲̦͖̈́ ̷̖̮͈̏̉͋͝ͅO̵̧̡̤͚͍͑F̵͉̭͙̖͍̼́̇́̉̄͜ ̸̡͓̫͔̀̾̈́̍̓̚̚M̸͚̤͖͗̍͗Ý̶̘̼͎ ̶͎̫̇̔̕H̴̛̜͖͎͈̙̲͌̓̔͜͠Ē̴̺͕̣͒̈́̍̑̈́Ȧ̸̱̦͈̟̕͝D̸̢̼̬̤͙̱̋̊",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("G̵̟̾͝É̴̟͜T̷͇͔͓̜̟͖͙͛̏̀̄ ̷̱̈Ó̷̗͙͕͠͠Ų̷̡̰̘̠̗̼̂̈́̄̇͋̋͘T̶̡͔̪̲̦͖̈́ ̷̖̮͈̏̉͋͝ͅO̵̧̡̤͚͍͑F̵͉̭͙̖͍̼́̇́̉̄͜ ̸̡͓̫͔̀̾̈́̍̓̚̚M̸͚̤͖͗̍͗Ý̶̘̼͎ ̶͎̫̇̔̕H̴̛̜͖͎͈̙̲͌̓̔͜͠Ē̴̺͕̣͒̈́̍̑̈́Ȧ̸̱̦͈̟̕͝D̸̢̼̬̤͙̱̋̊", "All") 
+    end
+})
+
+Page.Button({
+    Text = "d̷̯͔͑e̶̳͊̆a̸̪͗͂t̸͈́h̶͇̊̅ ̸̩̬̅̏i̵̜̙͗͊s̶̨̅ ̵̳̈̿f̵̞̂̐o̵͉͙̒r̶͔̣͗̈́e̵̥͊͋ͅv̶͉̔̚e̴̯͐r̴͉̓͝",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("d̷̯͔͑e̶̳͊̆a̸̪͗͂t̸͈́h̶͇̊̅ ̸̩̬̅̏i̵̜̙͗͊s̶̨̅ ̵̳̈̿f̵̞̂̐o̵͉͙̒r̶͔̣͗̈́e̵̥͊͋ͅv̶͉̔̚e̴̯͐r̴͉̓͝", "All") 
+    end
+})
+
+Page.Button({
+    Text = "D̶̬̗͗̕ ̷͉̏̚Ị̶͆̿ ̸̖͎̑E̶̪̔̚ͅ",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("D̶̬̗͗̕ ̷͉̏̚Ị̶͆̿ ̸̖͎̑E̶̪̔̚ͅ", "All") 
+    end
+})
+
+Page.Button({
+    Text = "Ṁ̷̘̗͑U̴͇̪̽S̷̭̺̓͠T̸̼̩͐̓ ̴͇̃Ṣ̴̃̓Ṭ̴͍̐̏Ơ̵̢Ṗ̶̭",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Ṁ̷̘̗͑U̴͇̪̽S̷̭̺̓͠T̸̼̩͐̓ ̴͇̃Ṣ̴̃̓Ṭ̴͍̐̏Ơ̵̢Ṗ̶̭", "All") 
+    end
+})
+
+Page.Button({
+    Text = "É̸̟̓R̸̡̈̕R̵̹̮͋O̷̟̔R̴̨̓̿",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("É̸̟̓R̸̡̈̕R̵̹̮͋O̷̟̔R̴̨̓̿", "All") 
+    end
+})
+
+
+Page.Button({
+    Text = "ȋ̷̧̪ ̵̨͝c̶̼̠͑à̴̝n̸͔̬̈̽'̶̡̤̌͛ț̴̒ ̴͓͛̿b̵͍̈́ͅr̶̹̲̓̓e̸̢͊̓a̷͇̟̒̄t̸̨̡̋h̴̰͝e̶̟͇̽̆",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("ȋ̷̧̪ ̵̨͝c̶̼̠͑à̴̝n̸͔̬̈̽'̶̡̤̌͛ț̴̒ ̴͓͛̿b̵͍̈́ͅr̶̹̲̓̓e̸̢͊̓a̷͇̟̒̄t̸̨̡̋h̴̰͝e̶̟̽̆", "All") 
+    end
+})
+
+
+
+Page.Button({
+    Text = "i̴̞̼̋̏'̴̯̄͜m̵̟̓͑ͅ ̵̼̳̔͘f̵̞̔à̴̬̪̋l̸͈̩̿l̵̗̠͑i̴͇̊͂n̴̜͝g̷̣̰͆̐ ̶̬̬̈́͝t̵͎̙̽ọ̶͉̾̒ ̷͎̉͘m̶̱͉̿̊y̷͎̻͛ ̶̟̣̍̎d̷̬̉͆ẹ̷̝̃ạ̶̓̏t̴̥͈̕h̴͙̒́",
+    Callback = function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("i̴̞̼̋̏'̴̯̄͜m̵̟̓͑ͅ ̵̼̳̔͘f̵̞̔à̴̬̪̋l̸͈̩̿l̵̗̠͑i̴͇̊͂n̴̜͝g̷̣̰͆̐ ̶̬̬̈́͝t̵͎̙̽ọ̶͉̾̒ ̷͎̉͘m̶̱͉̿̊y̷͎̻͛ ̶̟̣̍̎d̷̬̉͆ẹ̷̝̃ạ̶̓̏t̴̥͈̕h̴̒́ ", "All") 
+    end
+})
