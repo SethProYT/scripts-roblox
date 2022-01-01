@@ -90,14 +90,6 @@ RS.C0 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
 LS.C0 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
 
 coroutine.wrap(function()
-    reanim['Sniper'].Handle.AccessoryWeld.Part1 = reanim['Left Arm']
-    reanim['Sniper'].Handle.AccessoryWeld.C1 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
-    reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(0 + 0 *
-                                                                                                    math.cos(sine / 13),
-        0 + 0 * math.cos(sine / 13), -0.80 + 0 * math.cos(sine / 13)) *
-                                                                                                 ANGLES(
-            RAD(-86 + 0 * math.cos(sine / 13)), RAD(-175 + 0 * math.cos(sine / 13)), RAD(7 + 0 * math.cos(sine / 13))),
-        .1)
     while true do -- anim changer
         if HumanDied then
             break
@@ -108,6 +100,14 @@ coroutine.wrap(function()
         elseif Root.Velocity.y < -1 then -- fall
             -- fall clerp here
         elseif Root.Velocity.Magnitude < 2 then -- idle
+            reanim['Sniper'].Handle.AccessoryWeld.Part1 = reanim['Left Arm']
+    reanim['Sniper'].Handle.AccessoryWeld.C1 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
+    reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(0 + 0 *
+                                                                                                    math.cos(sine / 13),
+        0 + 0 * math.cos(sine / 13), -0.80 + 0 * math.cos(sine / 13)) *
+                                                                                                 ANGLES(
+            RAD(-86 + 0 * math.cos(sine / 13)), RAD(-175 + 0 * math.cos(sine / 13)), RAD(7 + 0 * math.cos(sine / 13))),
+        .1)
             NECK.C0 = NECK.C0:Lerp(CF(0 + 0 * math.cos(sine / 13), 1 + 0 * math.sin(sine / 13),
                 0 + 0 * math.cos(sine / 13)) *
                                        ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
@@ -139,6 +139,14 @@ coroutine.wrap(function()
                     RAD(-360 + 0 * math.cos(sine / 13)), RAD(-175 + 0 * math.cos(sine / 13)),
                     RAD(18 + 0 * math.cos(sine / 13))), .1)
         elseif Root.Velocity.Magnitude < 20 then -- walk
+            reanim['Sniper'].Handle.AccessoryWeld.Part1 = reanim['Left Arm']
+    reanim['Sniper'].Handle.AccessoryWeld.C1 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
+    reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(0 + 0 *
+                                                                                                    math.cos(sine / 13),
+        0 + 0 * math.cos(sine / 13), -0.80 + 0 * math.cos(sine / 13)) *
+                                                                                                 ANGLES(
+            RAD(-86 + 0 * math.cos(sine / 13)), RAD(-175 + 0 * math.cos(sine / 13)), RAD(7 + 0 * math.cos(sine / 13))),
+        .1)
             NECK.C0 = NECK.C0:Lerp(CF(0 + 0 * math.cos(sine / 13), 1 + 0 * math.sin(sine / 13),
                 0 + 0 * math.cos(sine / 13)) *
                                        ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
