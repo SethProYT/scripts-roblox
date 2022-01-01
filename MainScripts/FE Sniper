@@ -9,8 +9,6 @@ local sound = Instance.new("Sound", game.Workspace)
 sound.SoundId = "rbxassetid://1427534819"
 sound.Name = 'Clubstep VIP'
 
-
-
 local mouse = game.Players.LocalPlayer:GetMouse()
 IT = Instance.new
 CF = CFrame.new
@@ -29,6 +27,7 @@ ABS = math.abs
 MRANDOM = math.random
 FLOOR = math.floor
 attacking = false
+kicking = false
 rs = game:GetService("RunService")
 
 mouse.Button1Down:Connect(function(key)
@@ -187,6 +186,14 @@ while wait() do
             if not attacking then
                 return
             end
+            reanim['Sniper'].Handle.AccessoryWeld.Part1 = reanim['Torso']
+            reanim['Sniper'].Handle.AccessoryWeld.C1 = CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0))
+            reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(-3 + 0 *
+                                                                                                            math.cos(
+                    sine / 13), -1 + 0 * math.cos(sine / 13), 0 + 0 * math.cos(sine / 13)) *
+                                                                                                         ANGLES(
+                    RAD(3 + 0 * math.cos(sine / 13)), RAD(273 + 0 * math.cos(sine / 13)),
+                    RAD(0 + 0 * math.cos(sine / 13))), .1)
             NECK.C0 = NECK.C0:Lerp(CF(0 + 0 * math.cos(sine / 13), 1 + 0 * math.sin(sine / 13),
                 0 + 0 * math.cos(sine / 13)) *
                                        ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
@@ -197,12 +204,12 @@ while wait() do
                         RAD(0 + 0 * math.sin(sine / 13))), .1)
             RS.C0 = RS.C0:Lerp(CF(1 + 0 * math.cos(sine / 13), 0.5 + 0 * math.sin(sine / 13),
                 0 + 0 * math.cos(sine / 13)) *
-                                   ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
-                    RAD(0 + 0 * math.sin(sine / 13))), .1)
+                                   ANGLES(RAD(94 + 0 * math.sin(sine / 13)), RAD(-8 + 0 * math.cos(sine / 13)),
+                    RAD(-55 + 0 * math.sin(sine / 13))), .1)
             LS.C0 = LS.C0:Lerp(
                 CF(-1 + 0 * math.cos(sine / 13), 1 + 0 * math.sin(sine / 13), 0 + 0 * math.cos(sine / 13)) *
-                    ANGLES(RAD(-6 + 23 * math.sin(sine / 13)), RAD(3 + 0 * math.cos(sine / 13)),
-                        RAD(-95 + 0 * math.sin(sine / 13))), .1)
+                    ANGLES(RAD(61 + 0 * math.sin(sine / 13)), RAD(-209 + 0 * math.cos(sine / 13)),
+                        RAD(10 + 0 * math.sin(sine / 13))), .1)
             RH.C0 = RH.C0:Lerp(CF(0.5 + 0 * math.cos(sine / 13), -1 + 0 * math.cos(sine / 13),
                 0 + 0 * math.cos(sine / 13)) *
                                    ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
@@ -211,12 +218,12 @@ while wait() do
                 0 + 0 * math.cos(sine / 13)) *
                                    ANGLES(RAD(0 + 0 * math.sin(sine / 13)), RAD(0 + 0 * math.cos(sine / 13)),
                     RAD(0 + 0 * math.sin(sine / 13))), .1)
-            reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(-2 + 0 *
+            reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(-3 + 0 *
                                                                                                             math.cos(
-                    sine / 13), 0 + 0 * math.cos(sine / 13), 0 + 0 * math.cos(sine / 13)) *
+                    sine / 13), -1 + 0 * math.cos(sine / 13), 0 + 0 * math.cos(sine / 13)) *
                                                                                                          ANGLES(
-                    RAD(-15 + 0 * math.cos(sine / 13)), RAD(-75 + 0 * math.cos(sine / 13)),
-                    RAD(-19 + 0 * math.cos(sine / 13))), .1)
+                    RAD(3 + 0 * math.cos(sine / 13)), RAD(273 + 0 * math.cos(sine / 13)),
+                    RAD(0 + 0 * math.cos(sine / 13))), .1)
         end)
     end
 end
@@ -226,11 +233,9 @@ local sound = Instance.new("Sound", game.Workspace)
 sound.SoundId = "rbxassetid://1427534819"
 sound.Name = 'Clubstep VIP'
 
-
-
-
 plr.Chatted:Connect(function(message)
-   if message == '-clubstep' then
-       game.workspace["Clubstep VIP"]:Play()
-     end
+    if message == '-clubstep' then
+        game.workspace["Clubstep VIP"]:Play()
+    end
 end)
+
