@@ -1,0 +1,49 @@
+ local Library =
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+    local Window = Library.CreateLib("Eternal Hub V2", "Sentinel")
+
+    local AutoFarmTab = Window:NewTab("Auto-Farmer")
+    local PlayerTab = Window:NewTab("Player")
+
+    local AutoFarmSection1 = AutoFarmTab:NewSection("AutoNinjsitu")
+    local AutoFarmSection2 = AutoFarmTab:NewSection("AutoSell")
+
+    AutoFarmSection1:NewToggle("AutoNinjsitu", "Starts Farming For ninjsitu.", function(state)
+        if state then
+            getgenv().ninjsitu = true 
+            ninjsitu()
+        else
+       getgenv().ninjsitu = false
+        end
+    end)
+
+    AutoFarmSection2:NewButton("Sell ninjsitu", "", function()
+        sell()
+    end)
+
+    function ninjsitu()
+        spawn(function()
+            while getgenv().ninjsitu do
+                for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+                    if tool:IsA("Tool") then
+                         tool.Parent = game:GetService("Players").LocalPlayer.Character -- I didn't use Equip because the Equip function unequips any other tools in your character.
+                    end
+                end
+                
+                local args = {[1] = "swingKatana"}
+                game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))      
+                
+                wait()
+            end
+        end)
+    end
+
+    function sell()
+        local oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").sellAreaCircles.sellAreaCircle2.circleOuter.CFrame
+       wait(0.05)  
+
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+    end

@@ -1,0 +1,25 @@
+killaura = false
+
+
+function pushaura(PlayerName)
+    spawn(function()
+        while killaura do
+            local args = {
+                [1] = game.Players:FindFirstChild(PlayerName).Character
+            }
+            game:GetService("Players").LocalPlayer.Character.Push.PushTool:FireServer(unpack(args))
+            wait()
+        end
+    end)
+end
+
+
+for i, v in pairs(game.Players:GetPlayers()) do
+    pushaura(v.Name)
+
+    while wait() do
+       if v.Name == "sethgarion8742" then
+           return nil;
+       end
+    end
+end
