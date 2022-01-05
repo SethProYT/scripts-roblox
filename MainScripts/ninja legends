@@ -1,26 +1,99 @@
- local Library =
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local DiscordLib =
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-    local Window = Library.CreateLib("Eternal Hub V2", "Sentinel")
+local win = DiscordLib:Window("discord library")
 
-    local AutoFarmTab = Window:NewTab("Auto-Farmer")
-    local PlayerTab = Window:NewTab("Player")
+local serv = win:Server("Eternal Hub V2", "")
 
-    local AutoFarmSection1 = AutoFarmTab:NewSection("AutoNinjsitu")
-    local AutoFarmSection2 = AutoFarmTab:NewSection("AutoSell")
+local TasksTab = serv:Channel("Auto-Tasks")
 
-    AutoFarmSection1:NewToggle("AutoNinjsitu", "Starts Farming For ninjsitu.", function(state)
-        if state then
-            getgenv().ninjsitu = true 
-            ninjsitu()
-        else
-       getgenv().ninjsitu = false
-        end
-    end)
 
-    AutoFarmSection2:NewButton("Sell ninjsitu", "", function()
+
+TasksTab:Button(
+    "Auto-Sell",
+    function()
         sell()
-    end)
+        DiscordLib:Notification("Notification", "Sold All Ninjsitu", "Okay pog")
+    end
+)
+
+TasksTab:Seperator()
+
+TasksTab:Toggle(
+    "Auto-Farm",
+    false,
+    function(bool)
+        getgenv().ninjsitu = bool
+        ninjsitu()
+    end
+)
+
+local PlayerTab = serv:Channel("Player")
+
+local speed =
+    PlayerTab:Slider(
+    "Change walkspeed",
+    16,
+    1000,
+    0,
+    function(t)
+     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t
+    end
+)
+
+TasksTab:Seperator()
+
+local Jump =
+    PlayerTab:Slider(
+    "Change JumpPower",
+    16,
+    1000,
+    0,
+    function(t)
+     game.Players.LocalPlayer.Character.Humanoid.JumpPower = t
+    end
+)
+
+local TeleportsTab = serv:Channel("Teleports")
+
+TeleportsTab:Button(
+    "TP To Shop",
+    function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.86697387695, 3.2399997711182, 30.765161514282)
+    end
+)
+
+TeleportsTab:Button(
+   "TP To Sell",
+   function()
+     sell2()
+   end
+)
+
+TeleportsTab:Seperator()
+
+TeleportsTab:Button(
+    "TP To Dark Skills And Light Skills",
+    function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-118.12268066406, 3.2399997711182, 30.009365081787)
+    end
+)
+
+
+TeleportsTab:Button(
+    "Unlock All Islands",
+    function()
+        for i, v in pairs(game:GetService("Workspace").islandUnlockParts:GetDescendants()) do
+            if v:IsA("Part") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+              end
+            wait(0.005)
+         end
+         DiscordLib:Notification("Notification", "Unlocked all Islands! Repeat again if didn't unlock all", "Got ya")
+
+    end
+)
+   
 
     function ninjsitu()
         spawn(function()
@@ -47,3 +120,9 @@
 
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
     end
+
+   function sell2()
+    local oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").sellAreaCircles.sellAreaCircle2.circleOuter.CFrame
+   end
