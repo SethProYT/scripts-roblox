@@ -1,0 +1,16 @@
+local UIS = game:GetService("UserInputService")
+local Player = game:GetService("Players").LocalPlayer
+local Character  = Player.Character
+
+
+UIS.InputBegan:Connect(function(Player)
+   if Player.KeyCode == Enum.KeyCode.X then
+       Character.Humanoid.WalkSpeed=24
+   end
+end)
+
+UIS.InputEnded:Connect(function(Player)
+    if Player.KeyCode == Enum.KeyCode.X then
+        Character.Humanoid.WalkSpeed=16
+    end
+end)

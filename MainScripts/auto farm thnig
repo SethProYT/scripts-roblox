@@ -1,0 +1,32 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Auto-Farm", "Sentinel")
+
+local Tab1 = Window:NewTab("Auto-Farm")
+
+local Section1 = Tab1:NewSection("Main")
+
+Section1:NewToggle("Toggle Auto-Farm", "", function(state)
+    if state then
+        getgenv().autofarm = state
+        autofarm()
+    else
+        getgenv().autofarm = state
+    end
+end)
+
+function autofarm()
+  spawn(function()
+   while getgenv().autofarm do
+    local teleports = {CFrame.new(22.339847564697, 4.4758930206299, 218.34600830078), CFrame.new(-39.961692810059, 4.4758920669556, 213.63815307617)}
+    
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleports[1]
+          wait(0.005)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleports[2]
+       wait(0.0)
+       game:GetService("Players").LocalPlayer.Character.Magnet.ClickEvent:FireServer()
+
+       wait()
+   end
+  end)
+end
