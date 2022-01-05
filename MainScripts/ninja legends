@@ -1,9 +1,9 @@
 local DiscordLib =
     loadstring(game:HttpGet"https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("discord library")
+local win = DiscordLib:Window("ur moms name is:"..game.Players.LocalPlayer.Name)
 
-local serv = win:Server("Eternal Hub V2", "")
+local serv = win:Server("Ninjas be like ", "")
 
 local TasksTab = serv:Channel("Auto-Tasks")
 
