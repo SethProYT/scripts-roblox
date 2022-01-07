@@ -1,0 +1,135 @@
+local args = {
+    [1] = "I got no time, I got no time to live, I got no time to live",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "And I can't say goodbye, And I'm regretting having memories, Of my friends who they used to be",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "Beside me before they left me to die And I know this is I know this is the truth",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "Beside me before they left me to die, And I know this is I know this is the truth",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "'Cause I've been staring at my death so many times These scary monsters roaming in the halls I wish I could just block the doors",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "And stay in bed until the clock will chime So my flashlight's on, and stay up 'til dawn I got this headache and my life's on the line",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "And stay in bed until the clock will chime So my flashlight's on, and stay up 'til dawn I got this headache and my life's on the line",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "I felt like I won, but I wasn't done The nightmare repeats itself every time Got to keep my calm, and carry on",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "Stay awake until the sun will shine But I'm not so strong, and they're not gone They're still out there to take what's left of mine",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+
+local args = {
+    [1] = "I have this urge I have this urge to kill I have this urge to kill and show that I'm alive",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "I'm getting sick from these apologies From people with priorities That their life matters so much more than mine",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "But I'm stuttering I'm stuttering again No one will listen and no one will understand",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "Because I'm crying as much as I speak 'Cause no one likes me when I shriek Want to go back to when it all began",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "So my flashlight's on, and stay up 'til dawn I got this headache and my life's on the line I felt like I won, but I wasn't done",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "So my flashlight's on, and stay up 'til dawn I got this headache and my life's on the line I felt like I won, but I wasn't done",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "The nightmare repeats itself every time Got to keep my calm, and carry on Stay awake until the sun will shine",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(3)
+
+local args = {
+    [1] = "But I'm not so strong, and they're not gone They're still out there to take what's left of mine",
+    [2] = "All"
+}
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+

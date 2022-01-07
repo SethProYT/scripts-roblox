@@ -1,0 +1,401 @@
+local args = {
+    [1] = "We're waiting every night",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "To finally roam and invite",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "Newcomers to play with us",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "For many years we've been all alone",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "We're forced to be still and play",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "The same songs we've known since that day",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "An imposter took our life away",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "Now we're stuck here to decay",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Please let us get in!",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Don't lock us away!",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Don't lock us away!",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We're not like you're thinking",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We're poor little souls",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Who have lost all control",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "And we're forced here to take that role",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We've been all alone",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Since 1987",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Join us, be our friend",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Or just be stuck and defend",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "After only you got",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Five nights at freddy's",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Is this where you wanna be?",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "I just don't get it",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Why do you want to stay?",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+local args = {
+    [1] = "Five nights at freddy's",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Is this where you wanna be?",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "I just don't get it",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Why do you want to stay?",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Five nights at freddy's'",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We're really quite surprised",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+
+local args = {
+    [1] = "We get to see you another night",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "You should have looked for another job, You should have said to this place good-bye",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(2)
+
+local args = {
+    [1] = "It's like there's so much more, Maybe you've been in this place before",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We remember a face like yours, You seem acquainted with those doors",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "We remember a face like yours, You seem acquainted with those doors",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(1)
+
+local args = {
+    [1] = "Please let us get in! Don't lock us away! We're not like what you're thinking We're poor little souls Who have lost all control And we're forced here to take that role",
+    [2] = "All"
+}
+
+Game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+
+
+
+-- We're waiting every night
+-- To finally roam and invite
+-- Newcomers to play with us
+-- For many years we've been all alone
+
+-- We're forced to be still and play
+-- The same songs we've known since that day
+-- An imposter took our life away
+-- Now we're stuck here to decay
+
+-- Please let us get in!
+-- Don't lock us away!
+-- We're not like what you're thinking
+
+-- We're poor little souls
+-- Who have lost all control
+-- And we're forced here to take that role
+
+-- We've been all alone
+-- Stuck in our little zone
+-- Since 1987
+
+-- Join us, be our friend
+-- Or just be stuck and defend
+-- After all you only got
+
+-- Five nights at Freddy's
+-- Is this where you wanna be?
+-- I just don't get it
+-- Why do you want to stay?
+
+-- Five nights at Freddy's
+-- Is this where you wanna be?
+-- I just don't get it
+-- Why do you want to stay?
+
+-- Five nights at Freddy's
+
+-- We're really quite surprised
+-- We get to see you another night
+-- You should have looked for another job
+-- You should have said to this place good-bye
+
+-- It's like there's so much more
+-- Maybe you've been in this place before
+-- We remember a face like yours
+-- You seem acquainted with those doors
+
+-- Please let us get in!
+-- Don't lock us away!
+-- We're not like what you're thinking
+
+-- We're poor little souls
+-- Who have lost all control
+-- And we're forced here to take that role
+
+-- We've been all alone
+-- Stuck in our little zone
+-- Since 1987
+
+-- Join us, be our friend
+-- Or just be stuck and defend
+-- After all you only got
+
+-- Five nights at Freddy's
+-- Is this where you wanna be?
+-- I just don't get it
+-- Why do you want to stay?
+
+-- Five nights at Freddy's
+-- Is this where you wanna be?
+-- I just don't get it
+-- Why do you want to stay?
+
+-- Five nights at Freddy's
+
+
