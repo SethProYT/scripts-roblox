@@ -1,0 +1,6 @@
+getgenv().autofarm2 = true
+
+while getgenv().autofarm2 do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2551.8212890625, 278.34591674805, 339.68173217773)
+   wait(6)
+end
