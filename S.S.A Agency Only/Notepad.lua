@@ -10,7 +10,7 @@
 
 
     NotepadGUI.Name = "NotepadGUI"
-    NotepadGUI.Parent = game.Players.LocalPlayer.PlayerGui
+    NotepadGUI.Parent = game.CoreGui
     NotepadGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     Holder.Name = "Holder"
