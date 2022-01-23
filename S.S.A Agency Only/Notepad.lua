@@ -1,7 +1,3 @@
-local notepad = {}
-
-
-function notepad:CreateNotes()
     local NotepadGUI = Instance.new("ScreenGui")
     local Holder = Instance.new("Frame")
     local TextBox = Instance.new("TextBox")
@@ -132,6 +128,3 @@ function notepad:CreateNotes()
         end)
     end
     coroutine.wrap(VZCAZZ_fake_script)()
-
-end
-
