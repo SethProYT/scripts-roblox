@@ -1,4 +1,4 @@
-    local NotepadGUI = Instance.new("ScreenGui")
+local NotepadGUI = Instance.new("ScreenGui")
     local Holder = Instance.new("Frame")
     local TextBox = Instance.new("TextBox")
     local Settings = Instance.new("TextButton")
