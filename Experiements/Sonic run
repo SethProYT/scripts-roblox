@@ -1,14 +1,15 @@
-local UserInputService = game:GetService("UserInputService")
+local UIS = game:GetService("UserInputService")
+local plr = game:GetService "Players".LocalPlayer
+local char = plr.Character
 
-
-UserInputService.InputBegan:Connect(function(Player)
-    if Player.KeyCode == Enum.KeyCode.LeftShift then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 90 ---- SUPER SPEED
+UIS.InputBegan:Connect(function(gp, input)
+    if not gp and input.KeyCode == Enum.KeyCode.LeftShift then
+        char.Humanoid.WalkSpeed = 40
     end
 end)
 
-UserInputService.InputEnded:Connect(function(Player)
-    if Player.KeyCode == Enum.KeyCode.LeftShift then
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+UIS.InputEnded:Connect(function(gp, input)
+    if not gp and input.KeyCode == Enum.KeyCode.LeftShift then
+        char.Humanoid.WalkSpeed = 16
     end
 end)
