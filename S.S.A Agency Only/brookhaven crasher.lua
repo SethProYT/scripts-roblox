@@ -129,9 +129,3 @@ end
 
 -- k()
 -- o()
-
-if getgenv().CrashMethod == "Normal" then
-    k()
-elseif getgenv().CrashMethod == "Secondary" then
-    o()
-end
