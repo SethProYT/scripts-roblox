@@ -1,7 +1,6 @@
 local plr = game:GetService("Players").LocalPlayer
 local char = plr.Character
 getgenv().toggle = true
-getgenv().CrashMethod = nil
 
 function k()
     game:GetService("RunService").Heartbeat:Connect(function()
