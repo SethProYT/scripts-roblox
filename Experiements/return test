@@ -1,0 +1,11 @@
+function check()
+    if game:isLoaded() then
+        return true;
+    end
+end
+
+local check = check()
+
+if check then
+    print("yes it is true")
+end

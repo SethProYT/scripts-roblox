@@ -83,10 +83,42 @@ Mode='3'
 end
 end)
 
+local RunningAnim = {
+    ["Idle"] = true,
+    ["Walk"] = false,
+    ["Jump"] = false,
+    ["Fall"] = false,
+    ["Run"] = false
+}
 
-walkspeed=game:GetService("UserInputService").InputBegan:Connect(function(Player)   
-    if Player.KeyCode == Enum.KeyCode.LeftShift then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
+local function Punch()
+    if RunningAnim.Idle then
+        NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(94+0*math.cos(sine/13)),RAD(12+0*math.cos(sine/13)),RAD(79+0*math.cos(sine/13))),.3)
+        LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(94+0*math.cos(sine/13)),RAD(12+0*math.cos(sine/13)),RAD(-11+0*math.cos(sine/13))),.3)
+        LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+        LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+    elseif RunningAnim.Walk then
+        --walking punch clerp here
+    elseif RunningAnim.Jump then
+        --jumped punch clerp here
+    elseif RunningAnim.Fall then
+        --falling punch clerp here
+    elseif RunningAnim.Run then
+        --running punch clerp here
+    end
+end
+
+game:GetService("UserInputService").InputEnded:Connect(function(gp,inp)
+    if not gp and inp.KeyCode == Enum.KeyCode.F then
+        Punch()
     end
 end)
 
@@ -94,7 +126,6 @@ end)
 coroutine.wrap(function()
 while true do -- anim changer
 if HumanDied then mousechanger:Disconnect() break end
-if HumanDied then walkspeed:Disconnect() break end
 sine = sine + speed
 local rlegray = Ray.new(reanim["Right Leg"].Position + Vector3.new(0, 0.5, 0), Vector3.new(0, -2, 0))
 local rlegpart, rlegendPoint = workspace:FindPartOnRay(rlegray, char)
@@ -130,6 +161,11 @@ elseif Root.Velocity.Magnitude < 2 then -- idle
     LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-22+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(43+0*math.cos(sine/13))),.3)
     RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
     LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+    for i,v in pairs(RunningAnim) do
+        RunningAnim[tostring(v)] = false
+    end
+
+    RunningAnim.Idle = true
 elseif Root.Velocity.Magnitude < 20 then -- walk
     reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(90+0*math.cos(sine/13),86+0*math.cos(sine/13),90+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(-93+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
     reanim['Sniper'].Handle.AccessoryWeld.C0 = reanim['Sniper'].Handle.AccessoryWeld.C0:Lerp(CF(90+0*math.cos(sine/13),86+0*math.cos(sine/13),90+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(-93+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
