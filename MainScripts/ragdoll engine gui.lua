@@ -40,8 +40,6 @@ Main:Toggle(
                         local A_1 = game:GetService("Workspace"):FindFirstChild(hit.Parent.Name)
                         local Event = game:GetService("Players").LocalPlayer.Character.Push.PushTool
                         Event:FireServer(A_1)
-                    else
-                        return;    
                     end
                 end)
             end
