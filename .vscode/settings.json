@@ -4,8 +4,8 @@
         "lowercase-global",
         "deprecated"
     ],
-    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingBrackets": "always",
     "editor.autoClosingDelete": "always",
-    "editor.autoClosingOvertype": "never",
-    "editor.autoClosingQuotes": "never"
+    "editor.autoClosingOvertype": "always",
+    "editor.autoClosingQuotes": "always"
 }
