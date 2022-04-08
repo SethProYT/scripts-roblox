@@ -1,24 +1,3 @@
---- why i made this script: i want to see what pcall does 
+pcall(function(err)
 
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-
-local Window = Library.CreateLib("pcall test ngl this is rushed", "Sentinel")
-
-
-local pcalltab = Window:NewTab("Test tab")
-
-
-local pcallsection = pcalltab:NewSection("pcall be like")
-
-pcallsection:NewTextBox("enter for pcall to do its job :)", "", function(txt)
-    pcall(txt)
 end)
-
-
-
-function pcall(script)
-pcall(function()
-   loadstring((script))()
-end)
-end
