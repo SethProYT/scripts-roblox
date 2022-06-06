@@ -1,7 +1,6 @@
-_G.KeyWhitelist = ""
-local keys = loadstring(game:HttpGet("https://pastebin.com/raw/F6gaZ8Z5", true))()
-
-if keys[_G.KeyWhitelist] then
+_G.key = "asdasd123124565464" -- user should put his key here.
+local whitelistecheck = loadstring(game:HttpGet("https://pastebin.com/raw/", true))() -- pastebin link there
+if whitelistecheck[_G.key] then
      if game.placeId == 539960592 then
 
           local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
@@ -27,11 +26,8 @@ if keys[_G.KeyWhitelist] then
                end
            })
            
-     end
-
+     end     
 else
-     game.Players.LocalPlayer:Kick("Wrong key")
+game:service('Players').LocalPlayer:Kick('Not Whitelisted')
 end
-
-   
 
