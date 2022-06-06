@@ -1,5 +1,5 @@
-_G.key = "asdasd123124565464" -- user should put his key here.
-local whitelistecheck = loadstring(game:HttpGet("https://pastebin.com/raw/", true))() -- pastebin link there
+_G.key = "" -- user should put his key here.
+local whitelistecheck = loadstring(game:HttpGet("https://pastebin.com/raw/ZTjTGPVQ", true))() -- pastebin link there
 if whitelistecheck[_G.key] then
      if game.placeId == 539960592 then
 
